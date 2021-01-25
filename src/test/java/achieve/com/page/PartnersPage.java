@@ -35,15 +35,15 @@ public class PartnersPage extends BasePage {
         waitClickOnElement(hamburgerMenu_OurPartners);
     }
 
-    public List<WebElement> getListLogo(){
+    public List<WebElement> getListOfLogo(){
         return listLogo;
     }
 
-    public List<WebElement> getListHeader(){
+    public List<WebElement> getListOfHeader(){
         return listHeader;
     }
 
-    public List<WebElement> getListDescription(){
+    public List<WebElement> getListOfDescription(){
         return listDescription;
     }
 }
