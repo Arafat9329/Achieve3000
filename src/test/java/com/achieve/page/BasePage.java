@@ -1,8 +1,7 @@
-package achieve.com.page;
+package com.achieve.page;
 
-import achieve.com.utils.Driver;
+import com.achieve.utils.Driver;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
     public BasePage(){

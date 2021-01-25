@@ -1,4 +1,4 @@
-package achieve.com.utils;
+package com.achieve.utils;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;

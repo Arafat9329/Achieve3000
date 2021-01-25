@@ -1,4 +1,4 @@
-package achieve.com.utils;
+package com.achieve.utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

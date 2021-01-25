@@ -1,4 +1,4 @@
-package achieve.com.utils;
+package com.achieve.utils;
 
 import java.io.FileInputStream;
 import java.io.InputStream;

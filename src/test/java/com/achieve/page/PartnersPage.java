@@ -1,14 +1,11 @@
-package achieve.com.page;
+package com.achieve.page;
 
-import achieve.com.utils.BrowserUtilities;
-import achieve.com.utils.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-import static achieve.com.utils.BrowserUtilities.*;
+import static com.achieve.utils.BrowserUtilities.*;
 
 public class PartnersPage extends BasePage {
 
