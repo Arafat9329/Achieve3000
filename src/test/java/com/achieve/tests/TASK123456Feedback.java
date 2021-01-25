@@ -49,7 +49,7 @@
 //
 //}
 //
-//    @DataProvider(name = "validLogins", parallel = false)
+//    @DataProvider(name = "validLogins", parallel = false)//FIXME: why parallel be false?
 //    public static Object[][] credentials(ITestContext context) {
 //        myIni(context);
 //        try {
@@ -90,7 +90,7 @@
 //                }
 //            }
 //
-//            int numberOfTests = 1; // or = i;
+//            int numberOfTests = 1; // or = i;//FIXME:- why number of tests is hardcoded? it must be equals to the size of tests list.
 //            String[][] usersInfo2 = new String[numberOfTests][3];
 //            System.arraycopy(usersInfo, 0, usersInfo2, 0, numberOfTests);//FIXME:im not sure this going to work on 2dArrays
 //
@@ -98,7 +98,7 @@
 //        } catch (Exception e) {
 //            System.out.println(e);
 //        }
-//        return null;
+//        return null;//FIXME:it’s a bad idea to return null, because not informative. It’s better to throw specific runtime exception with a message
 //
 //    }
 //
@@ -116,23 +116,24 @@
 //
 //        loginUGH(uid, pwd, customer_type, driver, methodName);
 //
-//        new IndicatorCards(driver, waitInterval, codeBase);
+//        new IndicatorCards(driver, waitInterval, codeBase);//FIXME: it’s better to create reference variables for objects to be able to reuse them
 //        UserPage userPage = new UserPage(driver, waitInterval);
 //        userPage.waitInterval = waitInterval;
 //
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//FIXME: should be in @BeforeMethod
+                                                                          // FIXME: it’s not recommended to use implicit and explicit wait together since it leads to extra waits.
 //        userPage.openFilterPanel(driver, methodName);
 //        Filters filtersPage = userPage.getFilters(methodName, driver, waitInterval, knownIssues, forceDateRangeInd forceDateRangeValue, true, forceSchoolYearValue);
 //        filtersPage.setUpFilters(customer_type, methodName);
 //        BestPage bestPage = new BestPage(methodName, driver, waitInterval, codeBase, knownIssues, forceDateRangeInd, forceDateRangeValue);
 //        currentURL = bestPage.getMark(methodName, filtersPage);
 //        userPage.waitInterval = waitInterval;
-//        userPage.logOut(driver, methodName, waitInterval);
+//        userPage.logOut(driver, methodName, waitInterval);//FIXME: wait interval set twice?
 //
 //
 //        userPage.useBestPageFromUserFromAnotherPlace(currentURL, driver);
 //
-//        loginUGHLight(access[0], access[1], "skip", driver, methodName);
+//        loginUGHLight(access[0], access[1], "skip", driver, methodName);//FIXME:why skip status is hardcoded? Status must be retrieved prom ItestResult: ItestResult.getStatus()
 //        //	wait.until(ExpectedConditions.visibilityOf(bestPage.popup3));
 //        //	wait.until(ExpectedConditions.visibilityOf(bestPage.popup4));
 //
